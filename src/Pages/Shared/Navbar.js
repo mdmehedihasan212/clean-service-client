@@ -1,6 +1,10 @@
 import React from 'react';
 
 const Navbar = ({ children }) => {
+    const items = <>
+        <li><a>Navbar Item 1</a></li>
+        <li><a>Navbar Item 2</a></li>
+    </>
     return (
         <div class="drawer drawer-end">
             <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
@@ -14,8 +18,7 @@ const Navbar = ({ children }) => {
                     </div>
                     <div class="flex-none hidden lg:block">
                         <ul class="menu menu-horizontal">
-                            <li><a>Navbar Item 1</a></li>
-                            <li><a>Navbar Item 2</a></li>
+                            {items}
                         </ul>
                     </div>
                 </div>
@@ -24,8 +27,7 @@ const Navbar = ({ children }) => {
             <div class="drawer-side">
                 <label for="my-drawer-3" class="drawer-overlay"></label>
                 <ul class="menu p-4 overflow-y-auto w-80 bg-base-100">
-                    <li><a>Sidebar Item 1</a></li>
-                    <li><a>Sidebar Item 2</a></li>
+                    {items}
                 </ul>
             </div>
         </div>
